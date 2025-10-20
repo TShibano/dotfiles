@@ -1,0 +1,20 @@
+[general]
+import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
+live_config_reload = true
+
+[terminal]
+shell = { program = "/opt/homebrew/bin/fish", args = ["-l"] }
+
+[window]
+dimensions = {columns = 200, lines = 60}
+option_as_alt = "Both"
+
+[font]
+# normal = {family = "UDEV Gothic NFLG", style = "Regular"}
+# bold = {family = "UDEV Gothic NFLG", style = "Bold"}
+# italic = {family = "UDEV Gothic NFLG", style = "Italic"}
+normal = {family = "Moralerspace Neon HW", style = "Regular"}
+bold = {family = "Moralerspace Neon HW", style = "Bold"}
+italic = {family = "Moralerspace Neon HW", style = "Italic"}
+size = 14.0
+

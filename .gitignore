@@ -1,0 +1,22 @@
+# Alacritty
+alacritty/themes
+
+# Fish shell 
+fish/completions
+fish/fish_variables
+
+# helix
+helix/themes
+
+# starship
+
+# Zed editor 
+zed/conversations
+zed/prompts
+zed/prompts
+
+# zellij
+
+# macOS system files
+.DS_Store
+
