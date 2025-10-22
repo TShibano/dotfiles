@@ -28,6 +28,10 @@ cd ~/dotfiles
 Create symbolic links to the configuration directories:
 
 ```shell
+# example: alacritty
+ln -sf ~/dotfiles/alacritty ~/.config/alacritty 
+# example: starship
+ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
 ```
 
 ## Prerequisites
@@ -35,8 +39,8 @@ Create symbolic links to the configuration directories:
 Install the required tools using Homebrew:
 
 ```shell
-brew install alacritty fish helix starship zellij
-brew install --cask zed
+brew install fish helix starship zellij
+brew install --cask zed alacritty 
 ```
 
 
