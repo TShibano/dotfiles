@@ -1,0 +1,21 @@
+layout {
+	tab name="Editor" {
+		pane split_direction="vertical" {
+			pane split_direction="horizontal" size="70%" {
+				pane command="hx" size="60%"
+				pane command="claude" size="40%" 
+			}
+			pane size="30%"
+		}
+		pane size=4 {
+			plugin location="zellij:status-bar"
+		}
+	
+	}
+	tab name="Git" {
+		pane command="lazygit"
+		pane size=4 {
+        	plugin location="zellij:status-bar"
+    	}
+	}
+}
