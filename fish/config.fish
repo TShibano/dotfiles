@@ -10,3 +10,6 @@ starship init fish | source
 set -gx PATH $PATH /Users/citrus/.lmstudio/bin
 # End of LM Studio CLI section
 
+# zoxide
+# ref: https://github.com/ajeetdsouza/zoxide -> Installation -> 2. Setup ~ -> Fish
+zoxide init fish | source
