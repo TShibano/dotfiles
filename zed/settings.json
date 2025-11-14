@@ -60,6 +60,8 @@
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Frappé"
   },
-  "icon_theme": "Catppuccin Frappé"
+  "icon_theme": "Catppuccin Frappé",
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  // display line number
+  "relative_line_numbers": true
 }
