@@ -1,0 +1,20 @@
+[init]
+	defaultBranch = main
+[user]
+	name = citrus
+	email = citrus.mikan88@gmail.com
+[alias]
+	al = config --get-regexp ^alias\\.
+	lg = log --oneline --graph
+	st = status
+[core]
+	pager = delta
+[interactive]
+	diffFiler = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+	line-numbers = true
+	side-by-side = true
+[merge]
+	conflictStyle = zdiff3
