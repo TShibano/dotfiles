@@ -13,3 +13,7 @@ set -gx PATH $PATH /Users/citrus/.lmstudio/bin
 # zoxide
 # ref: https://github.com/ajeetdsouza/zoxide -> Installation -> 2. Setup ~ -> Fish
 zoxide init fish | source
+
+# mmdc
+# HomebrewでインストールしたmmdcでGoogle Chromeへのパス設定
+set -gx PUPPETTER_EXECUTABLE_PATH "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"

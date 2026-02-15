@@ -12,7 +12,7 @@ roots = [
 "[" = "]"
 "`" = "`"
 [language-server.rust-analyzer.config.check]
-command = "rust-analyzer"
+command = "clippy"
 
 [language-server.rust-analyzer.config]
 inlayHints.closingBraceHints.minLines = 10

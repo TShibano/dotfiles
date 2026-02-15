@@ -1,0 +1,17 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "citrus"
+email = "citrus.mikan88@gmail.com"
+
+[ui]
+editor = "hx"
+graph.style = "square"
+
+[colors]
+change_id = { fg = "bright green" }
+commit_id = { fg = "blue" }
+bookmarks = { fg = "red", bold = true }
+
+[aliases]
+lg = ["log", "-T", "change_id.short() ++ \" \" ++ \"(\" ++ author.timestamp().format(\"%Y-%m-%d %H:%M\") ++ \")\" ++ \" \" ++ description.first_line() ++ if(bookmarks, \" [\" ++ bookmarks.join(\", \") ++ \"]\", \"\") ++ \" \" ++ commit_id.short()" ]
