@@ -1,14 +1,11 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](red)\
-$os\
 $username\
-[](bg:peach fg:red)\
+@\
+$hostname\
+$os\
 $directory\
-[](bg:yellow fg:peach)\
-${custom.jj}\
-[](fg:yellow bg:green)\
 $c\
 $rust\
 $golang\
@@ -18,21 +15,24 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:green bg:sapphire)\
 $conda\
-[](fg:sapphire bg:lavender)\
-$time\
-[ ](fg:lavender)\
 $cmd_duration\
+${custom.jj}\
 $line_break
 $character"""
 
 
 palette = 'catppuccin_mocha'
 
-[os]
+[hostname]
+ssh_only = false
 disabled = false
-style = "bg:red fg:crust"
+style = "fg:green"
+format = "[ $hostname ]($style)"
+
+[os]
+# disabled = false
+# style = "bg:red fg:crust"
 
 [os.symbols]
 Windows = ""
@@ -57,15 +57,17 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:red fg:crust"
-style_root = "bg:red fg:crust"
-format = '[ $user]($style)'
+style_user = "fg:green"
+style_root = "fg:red"
+format = '[ $user ]($style)'
 
 [directory]
-style = "bg:peach fg:crust"
-format = "[ $path ]($style)"
+style = "fg:blue"
+format = "[ in $path ]($style)"
 truncation_length = 3
-truncation_symbol = "…/"
+# truncation_symbol = "…/"
+truncation_symbol = ""
+# format = "[ in $path ]"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -75,11 +77,12 @@ truncation_symbol = "…/"
 "Developer" = "󰲋 "
 
 [custom.jj]
-symbol = ""
-#style = "bg:yellow"
-format = '[[ $output ](fg:crust bg:yellow)]($style)'
+symbol = " ($style)"
+style = "fg:yellow"
+# format = '$symbol $output'
 when = "jj-starship detect"
-shell = ["jj-starship", "--no-color",  "--jj-symbol", " ",  "--no-git-prefix"]
+# shell = ["jj-starship", "--jj-symbol", " ",  "--no-git-prefix"]
+shell = ["jj-starship", "--no-jj-prefix", "--no-symbol",  "--no-git-prefix"]
 
 [git_branch]
 disabled = true
@@ -103,9 +106,10 @@ style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [rust]
-symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+symbol = " "
+# style = "bg:green"
+# format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+# format = '$symbol( $version) '
 
 [golang]
 symbol = ""
@@ -134,8 +138,8 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [python]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
+# style = "fg:teal"
+# format = '$symbol( $version)(\(#$virtualenv\))'
 
 [docker_context]
 symbol = ""
