@@ -25,5 +25,5 @@ display-messages = true
 g = { a = "code_action"}
 
 [keys.insert]
-j = { j = "normal_mode"} # jj to exit insert mode
+j = { k = "normal_mode"} # jj to exit insert mode
 

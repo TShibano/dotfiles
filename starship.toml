@@ -1,9 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+\
 $username\
-@\
-$hostname\
 $os\
 $directory\
 $c\
@@ -62,7 +61,7 @@ style_root = "fg:red"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:blue"
+style = "fg:peach"
 format = "[ in $path ]($style)"
 truncation_length = 3
 # truncation_symbol = "…/"
@@ -77,7 +76,7 @@ truncation_symbol = ""
 "Developer" = "󰲋 "
 
 [custom.jj]
-symbol = " ($style)"
+symbol = " ($style)"
 style = "fg:yellow"
 # format = '$symbol $output'
 when = "jj-starship detect"
@@ -109,7 +108,7 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 symbol = " "
 # style = "bg:green"
 # format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
-# format = '$symbol( $version) '
+format = '$symbol( $version) '
 
 [golang]
 symbol = ""
