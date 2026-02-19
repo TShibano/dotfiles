@@ -7,8 +7,7 @@ $username\
 [](bg:peach fg:red)\
 $directory\
 [](bg:yellow fg:peach)\
-$git_branch\
-$git_status\
+${custom.jj}\
 [](fg:yellow bg:green)\
 $c\
 $rust\
@@ -75,14 +74,23 @@ truncation_symbol = "…/"
 "Pictures" = " "
 "Developer" = "󰲋 "
 
+[custom.jj]
+symbol = ""
+#style = "bg:yellow"
+format = '[[ $output ](fg:crust bg:yellow)]($style)'
+when = "jj-starship detect"
+shell = ["jj-starship", "--no-color",  "--jj-symbol", " ",  "--no-git-prefix"]
+
 [git_branch]
+disabled = true
 symbol = ""
-style = "bg:yellow"
-format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
+# style = "bg:yellow"
+# format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
 
 [git_status]
-style = "bg:yellow"
-format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+disabled = true
+# style = "bg:yellow"
+# format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
 
 [nodejs]
 symbol = ""
