@@ -1,6 +1,6 @@
 # catppuccin mocha
 # ref: https://github.com/catppuccin/helix
-theme="catppuccin_mocha"
+theme="catppuccin_frappe"
 [editor]
 true-color = true
 line-number = "relative"
