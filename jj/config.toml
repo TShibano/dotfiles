@@ -7,7 +7,7 @@ email = "citrus.mikan88@gmail.com"
 [ui]
 editor = "hx"
 graph.style = "square"
-diff-editor = "delta"
+# diff-editor = "delta"
 
 [colors]
 change_id = { fg = "bright green" }
