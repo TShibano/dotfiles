@@ -27,7 +27,7 @@
   // "show_edit_predictions": false,
   "languages": {
     "Rust": {
-      "show_edit_predictions": false
+      "show_edit_predictions": true
     },
     "Markdown": {
       "show_edit_predictions": true,
@@ -39,6 +39,11 @@
   },
   // AI >>>>>>>>>>>>>>>>>>>>>>>>>>>>
   "agent": {
+    "dock": "right",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
     "default_profile": "ask",
     "model_parameters": []
   },
@@ -58,5 +63,5 @@
   "icon_theme": "Catppuccin Frappé",
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   // display line number
-  "relative_line_numbers": true
+  "relative_line_numbers": "enabled"
 }

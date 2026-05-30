@@ -8,46 +8,62 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "collaboration_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "outline_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "git_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "project_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "terminal": {
     "shell": {
-      "program": "/opt/homebrew/bin/fish"
-    }
+      "program": "/opt/homebrew/bin/fish",
+    },
   },
-  // "show_edit_predictions": false,
+  // display line number
+  "relative_line_numbers": "enabled",
+  // AI >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  "agent": {
+    "dock": "right",
+    "default_model": {
+      "enable_thinking": true,
+      "provider": "ollama",
+      "model": "gemma4:e4b-mlx",
+    },
+    "default_profile": "ask",
+    "model_parameters": [],
+  },
+  "edit_predictions": {
+    "provider": "ollama",
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "model": "gemma4:e4b-mlx",
+      "prompt_format": "zeta",
+      "max_output_tokens": 512,
+    },
+    "allow_data_collection": "no",
+  },
   "languages": {
     "Rust": {
-      "show_edit_predictions": true
+      "show_edit_predictions": true,
+    },
+    "Python": {
+      "show_edit_predictions": true,
     },
     "Markdown": {
       "show_edit_predictions": true,
-      "format_on_save": "on"
-    }
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
-  // AI >>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "format_on_save": "on",
     },
-    "default_profile": "ask",
-    "model_parameters": []
   },
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-  "vim_mode": true,
+  // Keybindings >>>>>>>>>>>>>>>>>>>
+  "vim_mode": false,
+  "helix_mode": true,
+  // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   // Font >>>>>>>>>>>>>>>>>>>>>>>>>>>
   "buffer_font_family": "Moralerspace Neon HW",
   "ui_font_size": 14,
@@ -57,10 +73,27 @@
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé"
+    "dark": "Catppuccin Frappé",
+  },
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true,
+    "ss01": true,
+    "ss02": true,
+    "ss03": true,
+    "ss04": true,
+    "ss05": true,
+    "ss06": true,
+    "ss07": true,
+    "ss08": true,
   },
   "icon_theme": "Catppuccin Frappé",
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-  // display line number
-  "relative_line_numbers": "enabled"
+  // Python >>>>>>>>>>>>>>>>>>>>>>>
+  // Jupyter
+  "feature_flags": {
+    "tabular-data-preview": "on",
+    "notebooks": "on",
+  }
+  // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
