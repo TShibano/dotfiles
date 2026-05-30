@@ -7,6 +7,8 @@ email = "citrus.mikan88@gmail.com"
 [ui]
 editor = "hx"
 graph.style = "square"
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
+diff-editor = ":builtin"
 # diff-editor = "delta"
 
 [colors]
