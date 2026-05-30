@@ -21,6 +21,10 @@
 # reloaded while running; some only apply to new windows and others may require
 # a full restart to take effect.
 
+# Shell
+command = /opt/homebrew/bin/fish --login --interactive
+shell-integration = fish
+
 # Config syntax crash course
 # ==========================
 # # The config file consists of simple key-value pairs,
