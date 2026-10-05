@@ -21,6 +21,9 @@ display-messages = true
 [editor.auto-pairs]
 '"' = '"'
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 g = { a = "code_action"}
 
